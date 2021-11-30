@@ -21,12 +21,12 @@ const App = () => {
                 <Property />
               </Route>
               <Route exact path="/news">
-                <News />
+                <News simplified />
               </Route>
             </Switch>
           </div>
         </Layout>
-        <div className="footer"></div>
+        <div className="footer">This is the footer</div>
       </div>
     </div>
   );
