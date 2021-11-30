@@ -292,6 +292,10 @@ a:hover {
 .news-card {
   min-height: 300px !important;
 }
+.dash-card {
+  min-height: 150px !important;
+  width: 250px;
+}
 .news-image-container {
   display: flex !important;
   justify-content: space-between !important;
@@ -308,6 +312,12 @@ a:hover {
   color: black;
   margin: 10px 0px !important;
 }
+
+.dash-card p {
+  color: black;
+  margin: 10px 0px !important;
+}
+
 .provider-container {
   display: flex;
   justify-content: space-between;
@@ -350,7 +360,7 @@ a:hover {
 .exchange-image {
   margin: 0px 10px !important;
 }
-.search-crypto {
+.search-dash {
   margin: 20px auto 30px auto;
   width: 250px;
 }
