@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Row, Col, Statistic, Card, Input } from "antd";
 import { useSelector } from "react-redux";
+import BlinkingComponent from "../BlinkingComponent";
 const { Title } = Typography;
 
 const DashCards = () => {
@@ -14,7 +15,7 @@ const DashCards = () => {
           <Title className="news-title" level={4}>
             IRR
           </Title>
-          <h2>{irr}%</h2>
+          <BlinkingComponent text={`${irr + " %"}`}></BlinkingComponent>
         </Card>
       </Col>
       <Col xs={24} sm={12} lg={5}>
@@ -22,7 +23,7 @@ const DashCards = () => {
           <Title className="news-title" level={4}>
             NPV
           </Title>
-          <h2>{npv}%</h2>
+          <BlinkingComponent text={`${npv + " %"}`}></BlinkingComponent>
         </Card>
       </Col>
       <Col xs={24} sm={12} lg={5}>
@@ -30,7 +31,7 @@ const DashCards = () => {
           <Title className="news-title" level={4}>
             CapRate
           </Title>
-          <h2>{caprate}%</h2>
+          <BlinkingComponent text={`${caprate + " %"}`}></BlinkingComponent>
         </Card>
       </Col>
       <Col xs={24} sm={12} lg={5}>
@@ -38,7 +39,7 @@ const DashCards = () => {
           <Title className="news-title" level={4}>
             Cash on Cash
           </Title>
-          <h2>{cashoncash}%</h2>
+          <BlinkingComponent text={`${cashoncash + " %"}`}></BlinkingComponent>
         </Card>
       </Col>
     </Row>

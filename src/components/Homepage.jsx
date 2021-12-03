@@ -3,10 +3,8 @@ import React from "react";
 import { Typography, Row, Col, Statistic, Card, Input } from "antd";
 import DashCards from "./Dash/DashCards";
 import AddressDetails from "./Dash/AddressDetails";
-import Cashflow from "./Cashflow/Cashflow";
-
 export const Homepage = () => {
-  const [irrState, setIrrState] = useState(5);
+  const [hilight, setHighlight] = useState({ highlight: false });
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -19,7 +17,6 @@ export const Homepage = () => {
       </Col>
       <DashCards></DashCards>
       <AddressDetails></AddressDetails>
-      <Cashflow></Cashflow>
     </>
   );
 };

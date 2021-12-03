@@ -385,3 +385,42 @@ a:hover {
   padding: 20px;
   align-items: center;
 }
+
+.cashflow {
+  float: right;
+}
+.cashflow .runAnalysisButton {
+  padding: 10px;
+  margin: 20px;
+  width: 200px;
+  height: 80px;
+}
+
+.ant-timeline-item-tail {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  height: calc(100% - 10px);
+  border-left: 2px solid #d7d7d7 !important;
+}
+
+.transactionHistory {
+  float: right;
+}
+.element {
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+
+  background-color: white;
+  padding: 5px;
+}
+
+.highlight {
+  color: white;
+  background-color: green;
+}

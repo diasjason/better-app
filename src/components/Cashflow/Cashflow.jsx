@@ -1,22 +1,31 @@
 import { Button } from "antd";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { reset, runAnalysis } from "../../app/dashboard";
+import { reset, runAnalysis } from "../../app/property";
 import { CaretRightOutlined, SyncOutlined } from "@ant-design/icons";
+import { flash, unFlash } from "../../app/highlight";
 
 const Cashflow = () => {
   const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(runAnalysis());
+    dispatch(flash());
+    setTimeout(() => {
+      dispatch(unFlash());
+    }, 1000);
+  };
   return (
-    <div>
+    <div className="cashflow">
       <Button
+        className="runAnalysisButton"
         type="primary"
         icon={<CaretRightOutlined />}
-        onClick={() => dispatch(runAnalysis())}
+        onClick={handleClick}
       >
-        Run
+        Run Cashflow Analysis
       </Button>
       <Button
-        type="primary"
+        type="dash"
         shape="circle"
         icon={<SyncOutlined />}
         onClick={() => dispatch(reset())}
