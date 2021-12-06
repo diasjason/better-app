@@ -1,8 +1,12 @@
-import { Button } from "antd";
+import { Button, notification } from "antd";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { reset, runAnalysis } from "../../app/property";
-import { CaretRightOutlined, SyncOutlined } from "@ant-design/icons";
+import {
+  CaretRightOutlined,
+  MailFilled,
+  SyncOutlined,
+} from "@ant-design/icons";
 import { flash, unFlash } from "../../app/highlight";
 
 const Cashflow = () => {
@@ -14,6 +18,15 @@ const Cashflow = () => {
       dispatch(unFlash());
     }, 1000);
   };
+  const handleSaveClick = () => {
+    notification.open({
+      message: "Mail Sent!",
+      description: "CashFlow Ananlysis Has been mailed to you",
+      onClick: () => {
+        console.log("Notification Clicked!");
+      },
+    });
+  };
   return (
     <div className="cashflow">
       <Button
@@ -24,13 +37,8 @@ const Cashflow = () => {
       >
         Run Cashflow Analysis
       </Button>
-      <Button
-        type="dash"
-        shape="circle"
-        icon={<SyncOutlined />}
-        onClick={() => dispatch(reset())}
-      >
-        Reset
+      <Button type="primary" icon={<MailFilled />} onClick={handleSaveClick}>
+        Save
       </Button>
     </div>
   );

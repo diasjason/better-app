@@ -12,4 +12,6 @@ export default configureStore({
     dashboard: dashboardReducer,
     highlight: highlightSlice,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(addressApi.middleware),
 });

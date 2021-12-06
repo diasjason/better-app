@@ -2,18 +2,22 @@ import React from "react";
 import { Typography, Row, Col, Statistic, Card, Input } from "antd";
 import { useGetAddressQuery } from "../../services/addressApi";
 import { useSelector } from "react-redux";
-import TransactionHistory from "./TransactionHistory";
 import TimelineItem from "antd/lib/timeline/TimelineItem";
 import Cashflow from "../Cashflow/Cashflow";
 import BlinkingComponent from "../BlinkingComponent";
 const { Title } = Typography;
 
-const AddressDetails = () => {
-  const { data: addressData, isLoading } = useGetAddressQuery({
-    searchString: "519885940_19999",
+const AddressDetails = (prop) => {
+  const {
+    data: addressData,
+    isLoading,
+    isError,
+    isFetching,
+  } = useGetAddressQuery({
+    searchString: prop.dmpId, //"519885940_19999"
   });
   const { value } = useSelector((state) => state.dashboard);
-  if (!addressData?.id) return "Loading...";
+  if (isLoading) return "Loading...";
   console.log(addressData);
   return (
     <>

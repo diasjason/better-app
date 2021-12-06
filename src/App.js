@@ -1,4 +1,4 @@
-import { Layout, Space, Typography } from "antd";
+import { Layout } from "antd";
 import React from "react";
 import { Navbar, Homepage, Property, News } from "./components";
 import "./App.css";
