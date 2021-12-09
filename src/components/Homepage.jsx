@@ -10,8 +10,7 @@ export const Homepage = () => {
       setText(event.target.value); //"519885940_19999" //100660192_215949340 //511389400_16742
     }
   };
-  console.log(text);
-  console.log(text !== "");
+
   return (
     <>
       <Col className="search-dash">

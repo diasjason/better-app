@@ -11,6 +11,7 @@ import { flash, unFlash } from "../../app/highlight";
 
 const Cashflow = () => {
   const dispatch = useDispatch();
+
   const handleClick = () => {
     dispatch(runAnalysis());
     dispatch(flash());
@@ -18,6 +19,7 @@ const Cashflow = () => {
       dispatch(unFlash());
     }, 1000);
   };
+
   const handleSaveClick = () => {
     notification.open({
       message: "Mail Sent!",

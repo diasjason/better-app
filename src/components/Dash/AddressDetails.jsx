@@ -16,7 +16,8 @@ const AddressDetails = (prop) => {
   } = useGetAddressQuery({
     searchString: prop.dmpId, //"519885940_19999"
   });
-  const { value } = useSelector((state) => state.dashboard);
+
+  const { value } = useSelector((state) => state.property);
   if (isLoading) return "Loading...";
   console.log(addressData);
   return (

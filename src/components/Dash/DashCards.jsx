@@ -6,7 +6,7 @@ const { Title } = Typography;
 
 const DashCards = () => {
   const { irr, npv, caprate, cashoncash } = useSelector(
-    (state) => state.dashboard
+    (state) => state.property
   );
   return (
     <Row gutter={[20, 20]}>

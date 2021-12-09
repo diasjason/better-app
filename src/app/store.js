@@ -3,13 +3,13 @@ import { addressApi } from "../services/addressApi";
 
 import { cRENews } from "../services/cRENews";
 import highlightSlice from "./highlight";
-import dashboardReducer from "./property";
+import propertyReducer from "./property";
 
 export default configureStore({
   reducer: {
     [cRENews.reducerPath]: cRENews.reducer,
     [addressApi.reducerPath]: addressApi.reducer,
-    dashboard: dashboardReducer,
+    property: propertyReducer,
     highlight: highlightSlice,
   },
   middleware: (getDefaultMiddleware) =>

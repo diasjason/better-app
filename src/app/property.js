@@ -27,7 +27,7 @@ export const propertySlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
+// Action creators & Action Types are generated for each case reducer function
 export const { increment, reset, runAnalysis } = propertySlice.actions;
 
 export default propertySlice.reducer;
